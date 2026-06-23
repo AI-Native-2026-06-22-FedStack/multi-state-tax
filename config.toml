@@ -1,4 +1,4 @@
 # The single source of Codex behavior for this repo.
-model_reasoning_effort = "medium"
+model_reasoning_effort = "low"
 sandbox_mode = "workspace-write"
 approval_policy = "on-request"
