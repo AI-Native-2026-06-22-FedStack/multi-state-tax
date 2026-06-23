@@ -1,0 +1,6 @@
+# 0001 - Bootstrapping The Governance Layer
+
+- **Asked:** Create the governance files required for the StateTrack deliverable: Codex config, AGENTS.md contract, data-classification posture, guardrail evidence, README onboarding, and a first prompt-journal entry.
+- **Produced:** Codex created root-level governance artifacts, linked the AI contract and classification posture from the README, documented redaction rules, recorded the approval-gate evidence, and used placeholders instead of sensitive values.
+- **Accepted / Rejected:** Accepted the root-level artifact structure and the restrictive settings. Rejected putting any real or realistic controlled values into examples, even for testing, because the repo should prove redaction without storing sensitive-looking data.
+- **Why:** This deliverable is about making the AI teammate governable before feature code exists. Medium reasoning effort is enough for careful setup work without overcomplicating simple artifacts. `workspace-write` limits file writes to the project, and `on-request` preserves a human approval gate for risky actions. The redaction rule keeps SSN, EIN, secrets, CUI, and SBU out of prompts and generated artifacts.
