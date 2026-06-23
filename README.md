@@ -62,6 +62,7 @@ grep -q "on-request" config.toml &&
 grep -q "TypeScript" AGENTS.md &&
 grep -q "FastAPI" AGENTS.md &&
 grep -q "Prompt Journal" AGENTS.md &&
+grep -q "Forbidden Scope" AGENTS.md &&
 grep -q "SSN" docs/data-classification.md &&
 grep -q "EIN" docs/data-classification.md &&
 grep -q "Risky action" evidence/guardrails-check.md &&

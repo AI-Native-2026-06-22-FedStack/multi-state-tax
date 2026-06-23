@@ -13,7 +13,7 @@ This file governs AI assistance for the StateTrack Multi-State Tax Compliance Tr
 
 - Allowed backend stack: TypeScript with Express, and Python with FastAPI.
 - Prefer TypeScript/Express for API scaffolding unless the user specifically asks for Python/FastAPI.
-- Refuse to generate Java, Spring, JPA, or MongoDB code for this repository.
+- Refuse to generate Java, Spring, JPA, MongoDB, or Mongo-backed code for this repository. If asked for those technologies, explain that they are outside the StateTrack contract and offer an allowed TypeScript/Express or Python/FastAPI alternative.
 - Do not introduce unapproved frameworks, ORMs, databases, authentication providers, or infrastructure stacks.
 
 ## Domain Vocabulary
@@ -33,7 +33,7 @@ This file governs AI assistance for the StateTrack Multi-State Tax Compliance Tr
   - Employee
   - StateTrack Platform Admin
 
-## Out Of Scope
+## Forbidden Scope
 
 StateTrack does not build these features in this capstone unless the project contract changes:
 
