@@ -40,6 +40,10 @@ StateTrack is a capstone repository for a Multi-State Tax Compliance Tracker. Th
    - [evidence/guardrails-check.md](evidence/guardrails-check.md) records the initial guardrail proof.
    - [prompt-journal/0001-bootstrap.md](prompt-journal/0001-bootstrap.md) records the first AI interaction decision.
 
+## Prompt journal format
+
+The user decides when a journal note should be created. When asked to add one, use the format defined in [AGENTS.md](AGENTS.md): `Asked`, `Produced`, `Accepted / Rejected`, and `Why`.
+
 ## Guardrail self-check
 
 Run this from the repository root before submitting the PR:
@@ -57,6 +61,7 @@ grep -q 'model_reasoning_effort = "low"' config.toml &&
 grep -q "on-request" config.toml &&
 grep -q "TypeScript" AGENTS.md &&
 grep -q "FastAPI" AGENTS.md &&
+grep -q "Prompt Journal" AGENTS.md &&
 grep -q "SSN" docs/data-classification.md &&
 grep -q "EIN" docs/data-classification.md &&
 grep -q "Risky action" evidence/guardrails-check.md &&

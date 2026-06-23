@@ -49,3 +49,22 @@ If asked to implement an out-of-scope feature, refuse the implementation and off
 - Add focused tests when changing behavior.
 - Do not use real PII or production-derived values in tests.
 - Keep generated fixtures synthetic, minimal, and clearly labeled.
+
+## Prompt Journal
+
+- Create or update prompt-journal entries only when the user explicitly asks for a journal note.
+- Store entries in `prompt-journal/` and use this format:
+
+```md
+# YYYY-MM-DD - Task title
+
+**Asked:** ...
+
+**Produced:** ...
+
+**Accepted / Rejected:** ...
+
+**Why:** ...
+```
+
+- Keep the `Why` field decision-focused so the user can defend the work later with Codex disabled.
