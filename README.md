@@ -8,7 +8,7 @@ StateTrack is a capstone repository for a Multi-State Tax Compliance Tracker. Th
 
    ```bash
    git clone <your-github-repo-url>
-   cd <firstname-lastname>-multi-state
+   cd multi-state-tax
    ```
 
 2. Create or switch to the Deliverable 1 branch.
@@ -53,6 +53,7 @@ test -f prompt-journal/0001-bootstrap.md &&
 grep -q "AGENTS.md" README.md &&
 grep -q "data-classification.md" README.md &&
 grep -q "workspace-write" config.toml &&
+grep -q 'model_reasoning_effort = "low"' config.toml &&
 grep -q "on-request" config.toml &&
 grep -q "TypeScript" AGENTS.md &&
 grep -q "FastAPI" AGENTS.md &&
