@@ -1,0 +1,9 @@
+# 2026-06-23 - Scaffold config.toml and governance layer
+
+**Asked:** Author the repo-root `config.toml` so Codex behaves predictably for every engineer who clones the repo. The config must set `model_reasoning_effort`, `sandbox_mode`, and `approval_policy`; choose the reasoning-effort value, pick restrictive federal-posture values for sandbox and approval, and do not add any setting that removes the human approval gate.
+
+**Produced:** A repo-root `config.toml` with `model_reasoning_effort = "low"`, `sandbox_mode = "workspace-write"`, and `approval_policy = "on-request"`. Codex also produced the supporting governance artifacts: `AGENTS.md`, `docs/data-classification.md`, `evidence/guardrails-check.md`, `README.md`, and this first prompt-journal entry.
+
+**Accepted / Rejected:** Accepted the repo-root artifact structure and the restrictive settings. Accepted `low` as the default reasoning-effort level. Accepted `workspace-write` and `on-request` because they keep file writes scoped to the project and preserve a human approval gate for risky actions. Rejected putting any real or realistic controlled values into examples, tests, prompts, logs, or documentation because the repo should prove redaction without storing sensitive-looking data.
+
+**Why:** Low is good enough for straight forward tasks as a default situation. If a task is not straight forward, the engineer can simply choose the appropriate setting for the situation. `workspace-write` is safe for a federal project because it restricts agent writes to the repository workspace instead of allowing arbitrary filesystem changes. `on-request` is safe because destructive, network, or out-of-workspace actions still pause for a human decision. The redaction rule keeps SSN, EIN, secrets, CUI, SBU, production records, and other controlled data out of prompts and generated artifacts.
